@@ -15,10 +15,6 @@ While game:
         if e.type == QUIT:
             game = False
 
-  display.update()
-  clock.tick(FPS)
-
-
 class GameSprite(sprite.Sprite):
    def __init__(self, player_image, player_x, player_y, size_x, size_y, player_speed):
        sprite.Sprite.__init__(self)
@@ -43,3 +39,8 @@ class Player(GameSprite):
    def fire(self):
        bullet = Bullet(img_bullet, self.rect.centerx, self.rect.top, 15, 20, -15)
        bullets.add(bullet)
+
+
+
+display.update()
+clock.tick(FPS)
